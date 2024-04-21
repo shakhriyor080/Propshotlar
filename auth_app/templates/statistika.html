@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    {% block title %}  
+   <title>Website statistikasini</title>  
+  <link rel="icon" href="{% static 'logo.png'%}" type="image/x-icon"> 
+{% endblock title%}
+
+</head>
+<body>
+    <header>
+    
+       
+       <div style="display: flex;"> <a href="{% url 'index'%}" style="display: flex; align-items: center;"><img style="width: 23px; height: 23px;" src="{%static 'arrow.png'%}" alt=""> </a><h1 >Sayt ko'rsatkichi</h1></div>
+    </header>
+    <section id="chartContainer"></section>
+    <footer>
+        <p>Saytimiz korsatkichlari. &copy; 2024-yil uchun</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

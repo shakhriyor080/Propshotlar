@@ -1,0 +1,32 @@
+.comments {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.new-comment textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.comment {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    position: relative;
+}
+
+.comment-text {
+    margin: 0;
+}
+
+.like-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.like-btn:hover {
+    color: red;
+}

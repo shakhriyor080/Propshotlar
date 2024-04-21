@@ -1,0 +1,71 @@
+{% load static%}
+
+{% block title %}  
+   <title>Kabinet</title>  
+  <link rel="icon" href="{% static 'logo.png'%}" type="image/x-icon"> 
+{% endblock title%}
+
+<style>
+  /* body{
+    /* background-image: url("{% static '123.jpg' %}");
+    background-size: cover;
+    
+    margin: 0%;
+    padding: 0%;
+ */
+
+  /* .box{
+    width: 1228px;
+    height: 590px;
+    background-color: rgba(0, 0, 0, 0.594);
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+  } */
+  /* .box-text{
+  
+    position: absolute;
+    align-items: center;
+    margin-top: -100px;
+  }
+  .text-user{
+    color: rgb(161, 14, 14);
+  } */
+ 
+ section{
+  background-image: url("{% static '123.jpg' %}");
+  background-size: cover;
+ }
+ .hero-body{
+  background-color: #00000077;
+ }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+<body>
+ 
+        
+          <section class="hero is-danger is-fullheight"   >
+            <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
+              <!-- <div style="display: flex;"> <a href="{% url 'index'%}" style="display: flex; align-items: center;"><img style="width: 23px; height: 23px;" src="{%static 'arrow.png'%}" alt=""> </a><h1 ></h1></div> -->
+              <div class="" >
+                <p class="title" >
+                <h1 style="color: white;  align-items: center; " class="is-size-2 ">   Xush kelibsiz: 
+                  {% if user.is_authenticated %}                    
+                   {{user.username}} </h1>
+                  {% endif %}
+              
+
+                </p>
+                <p class="subtitle d-flex is-justify-content-center">
+                  <!-- <button class="button is-link is-rounded">Rounded</button> -->
+                  <a class="btn-logout" href="{% url 'logout' %}"><button class="button is-link is-rounded is-large">Logout</button></a>
+                  <a class="btn-login" href="{% url 'login' %}"><button class="button is-link is-rounded is-large">Login</button></a>
+                  <a class="btn-register"  href="{% url 'register' %}"><button class="button is-link is-rounded is-large">Register</button></a>
+                  
+                </p>
+              </div>
+            </div>
+          </section>
+
+</body>
+</div>
