@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth import login, logout
 from .middlewares import auth, guest
-# Create your views here.
+
 
 @guest
 def register_view(request):
@@ -53,6 +53,10 @@ class OtzivListView(ListView):
 class StatistikaListView(ListView):
     model = Statistika
     template_name = 'statistika.html'
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user 
 
 class TarifListView(ListView):
     model = Tarif
